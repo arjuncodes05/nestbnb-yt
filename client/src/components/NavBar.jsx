@@ -22,12 +22,12 @@ const NavBar = () => {
     }, []);
 
     return (
-            <nav className={`fixed top-0 left-0 bg-indigo-500 w-full flex items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-50 ${isScrolled ? "bg-white/80 shadow-md text-gray-700 backdrop-blur-lg py-3 md:py-2" : "py-4 md:py-4"}`}>
+            <nav className={`fixed top-0 left-0 w-full flex items-center justify-between px-4 md:px-8 lg:px-24 xl:px-32 transition-all duration-500 z-50 ${isScrolled ? "bg-white/80 shadow-md text-gray-700 backdrop-blur-lg py-3 md:py-2" : "py-4 md:py-4"}`}>
 
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2">
-                    <img src={assets.logo} alt="logo" className={`h-16 ${isScrolled && "invert opacity-80"}`} />
-                    <p className={`font-semibold text-xl md:text-3xl ${isScrolled ? "invert" : "bg-text-white"}`}>Nestbnb</p>
+                    <img src={assets.logo} alt="logo" className={`h-12 lg:h-16 ${isScrolled && "invert opacity-80"}`} />
+                    <p className={`font-semibold  text-xl lg:text-3xl ${isScrolled ? "invert" : "text-white"}`}>Nestbnb</p>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -44,9 +44,9 @@ const NavBar = () => {
                 </div>
 
                 {/* Desktop Right */}
-                <div className="hidden md:flex items-center gap-4">
+                <div className="hidden md:flex items-center gap-4 lg:gap-6">
                   <img src={assets.searchIcon} alt="search" className={`h-7 ${isScrolled ? "invert" : ""} transition-all duration-500`} />
-                    <button className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 ${isScrolled ? "text-white bg-black" : "bg-white text-black"}`}>
+                    <button className={`px-8 py-2.5 rounded-full transition-all duration-500 ${isScrolled ? "text-white bg-black" : "bg-white text-black"}`}>
                         Login
                     </button>
                 </div>
