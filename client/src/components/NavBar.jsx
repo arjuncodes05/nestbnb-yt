@@ -45,8 +45,8 @@ const NavBar = () => {
 
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2">
-                    <img src={assets.logo} alt="logo" className={`h-12 lg:h-16 ${isScrolled && "invert opacity-80"}`} />
-                    <p className={`font-semibold  text-xl lg:text-3xl ${isScrolled ? "invert" : "text-white"}`}>Nestbnb</p>
+                    <img src={assets.logo} alt="logo" className={`h-12 lg:h-16`} />
+                    <p className={`font-semibold  text-xl lg:text-3xl ${isScrolled ? "text-black/80" : "text-white"}`}>Nestbnb</p>
                 </Link>
 
                 {/* Desktop Nav */}
