@@ -44,7 +44,7 @@ const Dashboard = () => {
                 <th className="py-3 px-4 text-gray-800 font-medium">User Name</th>
                 <th className="py-3 px-4 text-gray-800 font-medium max-sm:hidden">Room Name</th>
                 <th className="py-3 px-4 text-gray-800 font-medium text-center">Total Amount</th>
-                <th className="py-3 px-4 text-gray-800 font-medium ">Payment Status</th>
+                <th className="py-3 px-4 text-gray-800 font-medium text-center">Payment Status</th>
               </tr>
             </thead>
 

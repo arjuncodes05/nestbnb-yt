@@ -53,7 +53,7 @@ const AddRoom = () => {
           </select>
         </div>
         <div>
-          <p className="mt-4 text-gray-8--">Price <span className="text-sm">/night</span></p>
+          <p className="mt-4 text-gray-800">Price <span className="text-sm">/night</span></p>
           <input type="number" placeholder="0" className="border border-gray-300 mt-1 rounded p-2 w-24" value={inputs.pricePerNight} onChange={(e) => setInputs({...inputs, pricePerNight: e.target.value})} />
         </div>
       </div>
@@ -63,7 +63,7 @@ const AddRoom = () => {
         {
           Object.keys(inputs.amenities).map((amenity, index) => (
             <div key={index}>
-              <input type="checkbox" id={`amenities${index+1}`} checked={inputs.amenities [amenity]} onChange={(e) => setInputs({...inputs, amenities: {...inputs.amenities, [amenity]: !inputs.amenities[amenity] }})} />
+              <input type="checkbox" id={`amenities${index+1}`} checked={inputs.amenities[amenity]} onChange={(e) => setInputs({...inputs, amenities: {...inputs.amenities, [amenity]: !inputs.amenities[amenity] }})} />
               <label htmlFor={`amenities${index+1}`}> {amenity}</label>
             </div>
           ))
