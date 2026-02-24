@@ -5,7 +5,6 @@ import Title from "../../components/Title.jsx"
 const ListRoom = () => {
 
   const [rooms, setRooms] = useState(roomsDummyData);
-  console.log(roomsDummyData);
   
   const title = "Room Listings";
   const subtitle = "View, edit, or manage all listed rooms. Keep the information up-to-date to provide the best experience for users."
