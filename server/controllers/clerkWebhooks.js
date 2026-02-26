@@ -16,11 +16,21 @@ const clerkWebhooks = async(req, res) => {
         // verifying headers
         // await whook.verify(JSON.stringify(req.body), headers);
 
-        const payload = req.body.toString();
-        await whook.verify(payload, headers);
+        // const payload = req.body.toString();
+        // await whook.verify(payload, headers);
 
         // gettingd data from request body
-        const {data, type} = req.body
+        // const {data, type} = req.body
+
+
+        // ✅ req.body is a Buffer because of express.raw()
+        const payload = req.body.toString("utf8");
+
+        // ✅ verify BEFORE parsing JSON
+        const event = whook.verify(payload, headers);
+
+        // ✅ now event is trusted
+        const { data, type } = event;
 
         const userData = {
             _id: data.id,
